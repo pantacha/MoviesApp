@@ -23,7 +23,29 @@ export class FilmsService {
     let url = `${this.urlMoviedb}/discover/movie?primary_release_date.gte=${desdeStr}&primary_release_date.lte=${hastaStr}&api_key=${this.apiKey}&callback=JSONP_CALLBACK`;
 
     return this.jsonp.get(url)
-                      .map((res) => res.json());
+                        .map((data: any) => {
+                          return data._body.results;
+                        });
+  }
+
+  getPopulares(){
+
+    let url = `${this.urlMoviedb}/discover/movie?sort_by=popularity.desc&api_key=${this.apiKey}&callback=JSONP_CALLBACK`;
+
+    return this.jsonp.get(url)
+                          .map((data: any) => {
+                            return data._body.results;
+                          })
+  }
+
+  getPopularesNinos(){
+
+    let url = `${this.urlMoviedb}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${this.apiKey}&callback=JSONP_CALLBACK`;
+
+    return this.jsonp.get(url)
+                            .map((data: any) => {
+                              return data._body.results;
+                            })
   }
 
 }

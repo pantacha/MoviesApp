@@ -8,10 +8,14 @@ import {FilmsService} from './services/films.service';
 //Routes
 import {APP_ROUTING} from './app.routes';
 
+//Pipes
+import { FilmImagePipe } from './pipes/film-image.pipe';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
+import { GaleriaComponent } from './components/home/galeria.component';
 
 
 @NgModule({
@@ -19,7 +23,9 @@ import { SearchComponent } from './components/search/search.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    FilmImagePipe,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
