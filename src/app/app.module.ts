@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule, JsonpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
 
 //Services
 import {FilmsService} from './services/films.service';
@@ -31,7 +32,8 @@ import { GaleriaComponent } from './components/home/galeria.component';
     BrowserModule,
     HttpModule,
     JsonpModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule
   ],
   providers: [
     FilmsService
