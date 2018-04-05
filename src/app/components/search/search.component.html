@@ -12,14 +12,21 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
   
+=======
+>>>>>>> 0dc2f5dca7802c3044f79e9fed6605c23c5d3c26
   <div class="card-columns">
     <div class="card animated fadeIn fast" *ngFor="let film of _filmService.films">
       <img class="card-img-top" [src]="film | filmImage" [alt]="film.original_title">
       <div class="card-body">
         <h5 class="card-title">{{film.original_title}}</h5>
         <p class="card-text text-justify">{{film.overview | slice:0:250}}...</p>
+<<<<<<< HEAD
         <button type="button" [routerLink]="['/film',film.id,'search']" class="btn btn-outline-primary btn-block" name="button">view more...</button>
+=======
+        <button type="button" class="btn btn-outline-primary btn-block" name="button">view more...</button>
+>>>>>>> 0dc2f5dca7802c3044f79e9fed6605c23c5d3c26
       </div>
     </div>
   </div>

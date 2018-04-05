@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+<<<<<<< HEAD
 import {FilmsService} from '../../services/films.service';
 import {Router} from '@angular/router';
+=======
+>>>>>>> 0dc2f5dca7802c3044f79e9fed6605c23c5d3c26
 
 @Component({
   selector: 'app-film',
@@ -12,6 +15,7 @@ export class FilmComponent implements OnInit {
 
   film: any;
 
+<<<<<<< HEAD
   constructor(private route: ActivatedRoute, public _filmService: FilmsService,
               private router: Router) {
 
@@ -23,12 +27,20 @@ export class FilmComponent implements OnInit {
                               this.film=film;
                               console.log(film);
                             })
+=======
+  constructor(private route: ActivatedRoute) {
+
+    this.route.params.subscribe(parametros => {
+      console.log(parametros);
+      
+>>>>>>> 0dc2f5dca7802c3044f79e9fed6605c23c5d3c26
     })
   }
 
   ngOnInit() {
   }
 
+<<<<<<< HEAD
   regresarASearch(){
     this.router.navigate(['search']);
   }
@@ -38,4 +50,6 @@ export class FilmComponent implements OnInit {
   }
 
 
+=======
+>>>>>>> 0dc2f5dca7802c3044f79e9fed6605c23c5d3c26
 }

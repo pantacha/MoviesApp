@@ -60,6 +60,7 @@ export class FilmsService {
                                 return data._body.results;
                               })
   }
+<<<<<<< HEAD
 
   getFilm(id: string){
 
@@ -71,5 +72,7 @@ export class FilmsService {
                         })
 
   }
+=======
+>>>>>>> 0dc2f5dca7802c3044f79e9fed6605c23c5d3c26
 
 }
