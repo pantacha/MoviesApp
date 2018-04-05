@@ -1,0 +1,29 @@
+<div class="container main-container animated fadeIn fast" *ngIf="film">
+  <h1>{{film.original_title}}</h1>
+  <h6>({{film.genres[0].name}})</h6>
+  <div class="row">
+    <div class="col-md-5">
+      <img [src]="film | filmImage:true" [alt]="film.original_title"
+            class="img-thumbnail img-fluid">
+    </div>
+    <div class="col-md-7">
+      <h3>Synopsis:</h3>
+      <hr>
+      <p class="text-justify">
+        {{film.overview}}  ({{film.release_date}})
+      </p>
+      <p>
+        <strong>'{{film.tagline}}'</strong>
+      </p>
+      <p>
+        Rating:
+        <span class="badge badge-primary">{{film.vote_average}}/10</span>
+        <small>based on</small> <span class="badge badge-primary">{{film.popularity | number:'0.2-2'}}</span> <small>user ratings</small>
+      </p>
+      <br>
+      <button type="button" class="btn btn-outline-danger btn-sm" (click)="regresarASearch()" name="button">Go to search...</button>
+      <button type="button" class="btn btn-outline-danger btn-sm" (click)="regresarAHome()" name="button">Go to home...</button>
+    </div>
+  </div>
+
+</div>

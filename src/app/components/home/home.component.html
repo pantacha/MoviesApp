@@ -1,3 +1,16 @@
-<p>
-  ToDo...
-</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">FilmApp</h1>
+    <p class="lead">This is an app based on films</p>
+  </div>
+</div>
+
+<div class="container">
+  <br>
+
+
+  <app-galeria [films]="cartelera | slice:0:6" title="Cartelera"></app-galeria>
+  <app-galeria [films]="populares | slice:0:6" title="Películas más populares"></app-galeria>
+  <app-galeria [films]="popularesNinos | slice:0:6" title="Péliculas populares para los más pequeños"></app-galeria>
+  
+</div>
